@@ -15,9 +15,9 @@
 typedef struct Dir{
     char *name;
     int time;
-    struct Dir *subDir = NULL;
+    struct Dir *subDir[] = NULL;
     int numSubDir = 0;  /* no greater than 3 <- define in directory.h  */
-    struct Dir *ParentDir;
+    struct Dir *ParentDir = NULL;
     struct Permission dirPermit;
 } Directory;
 

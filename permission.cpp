@@ -15,14 +15,18 @@
 #include "permission.h"
 
 
-Permission createPermissions(defaultPermission, Funix *funix)
+Permission createPermissions(defaultPermission, int umask)
 //calculate the permission of a file according to umask and defaultPermission
 {
     struct Permission filePermission
-    filePermission.rwx = defaultPermission - funix->umask;
+    filePermission.rwx = defaultPermission - umask;
     return(filePermission)
 }
 
 
-/*use a compliment
+/*use a compliment*/
 
+void printPermission(Permission permission){
+    printf("this is a permission yeah");
+    //switch
+}
